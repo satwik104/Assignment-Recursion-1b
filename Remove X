@@ -1,0 +1,16 @@
+// Change in the given string itself. So no need to return or print anything
+#include<cstring>
+void removeX(char input[]) {
+    //base case
+    if(input[0] == '\0')
+        return;
+    //recursive call
+    removeX(input+1);
+    //Handelling our part
+    int len=strlen(input);
+    if(input[0] == 'x')
+    {
+        for(int i=1; i<=len; i++)
+            input[i-1]=input[i];
+    }
+}
